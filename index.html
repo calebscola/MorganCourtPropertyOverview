@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>3 Park Street Property Overview</title>
+</head>
+<body style="text-align:center; padding-top: 50px;">
+
+<h1>Starting Presentation...</h1>
+<p>If nothing happens, <a href="https://docs.google.com/presentation/d/e/2PACX-1vQSOCFizWZxtf8DBsgFN9za4GQbkBV-qCzIEQCAzGpv6wWLZuXiLh7VIOow9QuntJY8IUK7o2vvyiHK/pub?start=true&loop=false&delayms=5000" target="_blank">click here to open the slides</a>.</p>
+
+<audio id="bg-music" src="https://audio.jukehost.co.uk/QiLQHDvU69bmJDI5VkKnQAvWvaaXpdl4" autoplay loop></audio>
+
+<script>
+  const audio = document.getElementById('bg-music');
+  audio.volume = 0.5;
+
+  // Try to autoplay audio and open the slides
+  audio.play().then(() => {
+    window.open(
+      "https://docs.google.com/presentation/d/e/2PACX-1vTd7jPjCfG1zyXFGgUWHOeNGI3Ci6lgr_jRFfBjqfIpRXswz43gj2bgcc7NKTCow8Q3VGmeO9ViqEfu/pub?start=true&loop=false&delayms=5000",
+      "_blank"
+    );
+  }).catch(() => {
+    const btn = document.createElement('button');
+    btn.textContent = 'Click to Start Music and Slides';
+    btn.style.fontSize = '18px';
+    btn.onclick = () => {
+      audio.play();
+      window.open(
+        "https://docs.google.com/presentation/d/e/2PACX-1vTd7jPjCfG1zyXFGgUWHOeNGI3Ci6lgr_jRFfBjqfIpRXswz43gj2bgcc7NKTCow8Q3VGmeO9ViqEfu/pub?start=true&loop=false&delayms=5000",
+        "_blank"
+      );
+      btn.remove();
+    };
+    document.body.appendChild(btn);
+  });
+</script>
+
+</body>
